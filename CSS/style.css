@@ -1,0 +1,169 @@
+#entete_div {
+    background-color: white;
+}
+
+#nav_div {
+    display: flex;
+    justify-content: center;
+    font-family: 'shrikhand';
+}
+
+#position_div i {
+    width: 100%;
+}
+
+#position_div input {
+    border: 0px;
+}
+
+#position_div {
+    display: flex;
+    justify-content: center;
+    border: 0px solid transparent !important;
+}
+
+#titre h3 {
+    display: flex;
+    justify-content: center;
+    font-family: "shrikhand";
+}
+
+#titre p {
+    display: flex;
+    justify-content: center;
+    font-family: 'Roboto';
+}
+
+#recherche_div button {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    margin: auto;
+    border-radius: 100px;
+    height: 55px;
+    font-size: 19px;
+    padding-left: 25px;
+    padding-right: 25px;
+    background-color: #FF79DA;
+    color: white;
+}
+
+#filtre_titre h2 {
+    display: flex;
+    justify-content: flex-start;
+}
+
+.filtre_element_icone {
+    padding-left: 15px;
+    padding-right: 15px;
+}
+
+.filtre_numero {
+    border: 2px solid black;
+    border-radius: 100px;
+    width: 30px;
+    height: 30px;
+    margin-left: -35px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: #9356dc;
+    color: white;
+}
+
+#filtre_div li {
+    border: 2px solid gray;
+    display: flex;
+    text-align: center;
+    align-items: center;
+    border-radius: 55px;
+    height: 55px;
+    width: 100%;
+    margin-bottom: 30px !important;
+    padding: 20px;
+    margin: auto;
+    font-family: 'Roboto';
+    font-weight: bold;
+    font-size: larger;
+    background-color: gainsboro;
+}
+
+#filtre_div li:hover {
+    background-color: #9356dc;
+}
+
+#vignette {
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+    align-content: center;
+    width: 100%;
+    height: 100%;
+}
+
+#vignette img {
+    width: 100%;
+    height: 1690px;
+    object-fit: cover;
+}
+
+.vignette_annotation {
+    display: flex;
+    justify-content: right;
+    width: 96%;
+    position: relative;
+    top: -1646px;
+    font-size: 50px;
+    color: green;
+}
+
+.vignette_annotation span {
+    background-color: aquamarine;
+}
+
+.vignette_restaurant {
+    border: 1px solid gray;
+    margin: 20px;
+    border-radius: 22px;
+    width: 100%;
+}
+
+.restaurant_nom {
+    padding: 10px;
+    margin-top: -35px;
+}
+
+.restaurant_nom i {
+    display: flex;
+    justify-content: right;
+    position: relative;
+    top: -15px;
+}
+
+footer {
+    background-color: grey;
+}
+
+.footer_logo {
+    width: 100%;
+    padding: 25px;
+    margin-left: 11px;
+    display: flex;
+    justify-content: space-between;
+    font-size: 30px;
+    font-family: 'Shrikhand';
+    color: white;
+}
+
+
+footer ul {
+    list-style-type: none;
+    display: flex;
+    flex-direction: column;
+    margin-left: -15px;
+    color: white;
+    font-family: 'Roboto';
+    font-size: 20px;
+    line-height: 35px;
+}
