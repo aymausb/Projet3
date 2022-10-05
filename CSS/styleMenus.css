@@ -180,28 +180,28 @@ h3 {
 }
 
 #entrees_1 {
-    animation: monter 2s linear forwards;
+    animation: monter 1s linear forwards;
     margin-top: 10%;
     opacity: 0;
     animation-delay: 0s;
 }
 
 #entrees_2 {
-    animation: monter 2s linear forwards;
+    animation: monter 1s linear forwards;
     margin-top: 10%;
     opacity: 0;
     animation-delay: 0.2s;
 }
 
 #entrees_3 {
-    animation: monter 2s linear forwards;
+    animation: monter 1s linear forwards;
     margin-top: 10%;
     opacity: 0;
     animation-delay: 0.4s;
 }
 
 #entrees_4 {
-    animation: monter 2s linear forwards;
+    animation: monter 1s linear forwards;
     margin-top: 10%;
     opacity: 0;
     animation-delay: 0.5s;
@@ -270,6 +270,9 @@ h3 {
     padding: 12px;
     height: 55px;
     background-color: white;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
 }
 
 #plats_1 {
@@ -336,6 +339,9 @@ h3 {
     padding: 12px;
     height: 55px;
     background-color: white;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
 }
 
 #desserts_1 {
