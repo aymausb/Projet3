@@ -9,7 +9,6 @@ body {
 #header_logo {
     display: flex;
     justify-content: center;
-    font-family: "Shrikhand", sans-serif;
 }
 
 a {

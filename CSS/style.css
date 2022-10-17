@@ -57,7 +57,6 @@ body {
     display: flex;
     justify-content: center;
     text-align: center;
-    margin-left: 40px;
 }
 
 #nav_div img {
@@ -72,7 +71,7 @@ body {
     width: 100%;
     padding-top: 15px;
     padding-bottom: 15px;
-    background-color: rgb(200, 200, 200);
+    background-color: gainsboro;
 }
 
 #position_div input {
@@ -81,7 +80,7 @@ body {
     border: 0px;
     margin-left: 15px;
     font-weight: 700;
-    background-color: rgb(200, 200, 200);
+    background-color: gainsboro;
 }
 
 ::placeholder {
@@ -89,7 +88,7 @@ body {
 }
 
 #presentation {
-    background-color: gainsboro;
+    background-color: #f3f3f3;
 }
 
 .titre {
@@ -195,7 +194,7 @@ body {
 #vignette {
     display: flex;
     flex-direction: column;
-    background-color: gainsboro;
+    background-color: #f3f3f3;
     width: 100%;
     height: 100%;
     border: whitesmoke;
@@ -264,21 +263,21 @@ body {
     }
 }
 
-@keyframes remplissage {
+@keyframes remplis {
 
     0% {
         opacity: 0;
     }
 
     50% {
-        opacity: 1;
+        opacity: 0.5;
         background: linear-gradient(#9356dc, #ff79da);
         -webkit-background-clip: initial;
         -webkit-text-fill-color: transparent;
     }
 
     100% {
-        opacity: 2;
+        opacity: 1;
         background: linear-gradient(#9356dc, #ff79da);
         -webkit-background-clip: initial;
         -webkit-text-fill-color: transparent;
@@ -305,7 +304,7 @@ h4 {
     font-size: 25px;
 }
 
-#restaurant_nouveau .restaurant_nom {
+#restaurant_nouveau .restaurant_nom a {
     margin-top: -53px;
     line-height: 5px;
 }
@@ -321,7 +320,9 @@ h4 {
 
 a {
     text-decoration: none;
+    cursor: pointer;
     color: black;
+    
 }
 
 .restaurant_nom i {
@@ -335,7 +336,7 @@ a {
 
 footer {
     background-color: rgb(77, 77, 77);
-    width: 109%;
+    width: 100%;
     position: absolute;
 }
 
@@ -364,9 +365,49 @@ footer ul {
 
 /*tablettes à partir de 768px*/
 @media all and (max-width: 992px) and (min-width:768px) {
-    
 
+body {
+    width: 120%;
+    height: 100%;
+    margin: 0;
+    padding: 0;
+    font-family: "Roboto", sans-serif;
+}
 
+.restaurant_img {
+    width: 100%;
+}
 
+.vignette_restaurant {
+    width: 95% ;
+}
+
+footer {
+    width: 120%;
+}
 
 }
+
+@media all and (max-width: 767px) {
+
+    body {
+        width: 145%;
+        padding: 0;
+        margin: 0;
+    }
+
+    .restaurant_img {
+        width: 100%;
+    }
+    
+    .vignette_restaurant {
+        width: 90% ;
+    }
+
+
+
+
+footer {
+    width: 145%;
+}
+    }
