@@ -52,7 +52,7 @@
         <section id="restaurant_carte">
             <h2 class="restaurant_nom">À la française</h2>
 
-            <button class="restaurant_texte_icone">
+            <div class="restaurant_texte_icone">
 
                 <div class="icone_like1">
                     <i class="far fa-heart"></i>
@@ -62,7 +62,7 @@
                     <i class="fas fa-heart"></i>
                 </div>
 
-            </button>
+            </div>
 
             <section id="menu_bloc">
                 <section id="bloc_entrees">
@@ -78,6 +78,9 @@
                             <div class="vignette_texte">Aux zests d'orange</div>
                         </div>
                         <div class="vignette_prix">25€</div>
+                        <div class="validation">
+                            <i class="fas fa-check-circle fa-2x"></i>
+                        </div>
                     </div>
 
                     <div class="entrees_choix" id="entrees_2">
@@ -86,6 +89,9 @@
                             <div class="vignette_texte">Carotte, panais, topinambour</div>
                         </div>
                         <div class="vignette_prix">35€</div>
+                        <div class="validation">
+                            <i class="fas fa-check-circle fa-2x"></i>
+                        </div>
                     </div>
 
                     <div class="entrees_choix" id="entrees_3">
@@ -94,8 +100,11 @@
                             <div class="vignette_texte">Revisitée</div>
                         </div>
                         <div class="vignette_prix">20€</div>
+                        <div class="validation">
+                            <i class="fas fa-check-circle fa-2x"></i>
+                        </div>
                     </div>
-                    </div>
+
                 </section>
 
                 <section id="bloc_plats">
@@ -111,6 +120,9 @@
                             <div class="vignette_texte">Accompagnées d'une purée de panais</div>
                         </div>
                         <div class="vignette_prix">40€</div>
+                        <div class="validation">
+                            <i class="fas fa-check-circle fa-2x"></i>
+                        </div>
                     </div>
 
                     <div class="plats_choix" id="plats_2">
@@ -119,6 +131,9 @@
                             <div class="vignette_texte">Et parmentier de pommes de terres</div>
                         </div>
                         <div class="vignette_prix">35€</div>
+                        <div class="validation">
+                            <i class="fas fa-check-circle fa-2x"></i>
+                        </div>
                     </div>
 
                     <div class="plats_choix" id="plats_3">
@@ -127,6 +142,9 @@
                             <div class="vignette_texte">Sur son lit de gnocchis aux légumes</div>
                         </div>
                         <div class="vignette_prix">44€</div>
+                        <div class="validation">
+                            <i class="fas fa-check-circle fa-2x"></i>
+                        </div>
                     </div>
                 </section>
 
@@ -143,22 +161,31 @@
                             <div class="vignette_texte">Et purée de noisettes</div>
                         </div>
                         <div class="vignette_prix">18€</div>
+                        <div class="validation">
+                            <i class="fas fa-check-circle fa-2x"></i>
+                        </div>
                     </div>
 
                     <div class="desserts_choix" id="desserts_2">
                         <div class="vignette_details">
-                        <div class="bold">Fondant au chocolat</div>
-                        <div class="vignette_texte">Revisité</div>
-                    </div>
+                            <div class="bold">Fondant au chocolat</div>
+                            <div class="vignette_texte">Revisité</div>
+                        </div>
                         <div class="vignette_prix">22€</div>
+                        <div class="validation">
+                            <i class="fas fa-check-circle fa-2x"></i>
+                        </div>
                     </div>
 
                     <div class="desserts_choix" id="desserts_3">
                         <div class="vignette_details">
-                        <div class="bold">Millefeuille croustillant</div>
-                        <div class="vignette_texte">Myrtilles et pâte d'amande</div>
-                    </div>
+                            <div class="bold">Millefeuille croustillant</div>
+                            <div class="vignette_texte">Myrtilles et pâte d'amande</div>
+                        </div>
                         <div class="vignette_prix">23€</div>
+                        <div class="validation">
+                            <i class="fas fa-check-circle fa-2x"></i>
+                        </div>
                     </div>
                 </section>
             </section>
@@ -166,9 +193,9 @@
             <div id="nav_div">
                 <button>Commander</button>
             </div>
+        </section>
 
     </main>
-
     <footer>
         <div>
             <span class="footer_logo">
@@ -180,30 +207,30 @@
                 <span class="footer_icone">
                     <i class="fa-sharp fa-solid fa-utensils"></i>
                 </span>
-                <span class="footer_texte">
-                    Proposer un restaurant
-                </span>
+                <a href="#">
+                    <span class="footer_texte">Proposer un restaurant</span>
+                </a>
             </li>
 
             <li>
                 <span class="footer_icone">
                     <i class="fa-solid fa-handshake-angle"></i>
                 </span>
-                <span class="footer_texte">
-                    Devenir partenaire
-                </span>
+                <a href="#">
+                    <span class="footer_texte">Devenir partenaire</span>
+                </a>
             </li>
 
             <li>
-                <span class="footer_texte">
-                    Mentions légales
-                </span>
+                <a href="#">
+                <span class="footer_texte">Mentions légales</span>
+            </a>
             </li>
 
             <li>
-                <span class="footer_texte">
-                    Contact
-                </span>
+                <a href="@mail.to">
+                <span class="footer_texte">Contact</span>
+            </a>
             </li>
         </ul>
     </footer>
