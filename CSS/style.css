@@ -7,6 +7,8 @@ body {
 
 /*loading spinner debut*/
 .chargement {
+  max-width: 1400px;
+  margin: auto;
   position: fixed;
   z-index: 1;
   background: #ffff;
@@ -20,8 +22,8 @@ body {
 }
 
 .point {
-  height: 50px;
-  width: 50px;
+  height: 20px;
+  width: 20px;
   border-radius: 50%;
   background: linear-gradient(#ff79da, #9356dc);
   margin: 0 20px;
@@ -377,7 +379,7 @@ footer ul {
 }
 
 /*tablettes à partir de 768px*/
-@media all and (max-width: 992px) and (min-width: 768px) {
+@media all and (min-width: 768px) {
   body {
     width: 120%;
     height: 100%;
@@ -387,8 +389,8 @@ footer ul {
   }
 
   .point {
-    height: 20px;
-    width: 20px;
+    height: 30px;
+    width: 30px;
 }
 
   .restaurant_img {
@@ -404,28 +406,14 @@ footer ul {
   }
 }
 
-/*version mobile*/
-@media all and (max-width: 767px) {
-  body {
-    width: 145%;
-    padding: 0;
-    margin: 0;
-  }
+/*version desktop*/
+@media all and (min-width: 992px) {
 
   .point {
-    height: 20px;
-    width: 20px;
+    height: 50px;
+    width: 50px;
 }
 
-  .restaurant_img {
-    width: 100%;
-  }
 
-  .vignette_restaurant {
-    width: 90%;
-  }
 
-  footer {
-    width: 145%;
-  }
 }
