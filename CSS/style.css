@@ -1,9 +1,7 @@
-
-
 /*loading spinner debut*/
 .chargement {
-  max-width: 1400px;
-  margin: auto;
+  /*max-width: 1400px;*/
+  /*margin: auto;*/
   position: fixed;
   z-index: 1;
   background: #ffff;
@@ -50,6 +48,7 @@
     z-index: -1;
   }
 }
+
 /*loading spinner fin*/
 
 body {
@@ -65,8 +64,8 @@ body {
 }
 
 #nav_div img {
-  width: 100%;
-  height: 80px;
+  width: 70%;
+  height: 60px;
   padding: 20px;
 }
 
@@ -80,6 +79,10 @@ body {
   background-color: gainsboro;
 }
 
+#position_div i {
+  border: 2px solid red;
+}
+
 #position_div input {
   display: flex;
   justify-content: center;
@@ -87,6 +90,7 @@ body {
   margin-left: 15px;
   font-weight: 700;
   background-color: gainsboro;
+  /*text-align: center;*/
 }
 
 ::placeholder {
@@ -147,8 +151,19 @@ body {
   margin-left: 20px;
 }
 
+#filtre_div ol {
+  margin-block-start: 0em;
+  margin-block-end: 0em;
+  margin-inline-start: 0px;
+  margin-inline-end: 0px;
+  padding-inline-start: 0px;
+  margin-right: 20px;
+  margin-left: 20px;
+}
+
 #filtre_div {
   width: 100%;
+  margin-bottom: 50px;
 }
 
 .filtre_element_icone {
@@ -220,7 +235,7 @@ body {
 
 .restaurant_img img {
   width: 100%;
-  height: 400px;
+  height: 260px;
   object-fit: cover;
   border-radius: 20px 20px 0 0;
 }
@@ -230,7 +245,7 @@ body {
   justify-content: right;
   width: 96%;
   position: relative;
-  top: -365px;
+  top: -230px;
   font-size: 30px;
   color: green;
 }
@@ -296,16 +311,15 @@ body {
   display: flex;
   flex-wrap: wrap;
   justify-content: space-around;
-  padding: 15px 55px 105px 20px;
+  margin-bottom: 50px;
 }
 
 .vignette_restaurant {
   border: 1px solid gray;
   border-radius: 22px;
-  width: 100%;
-  margin-block: 20px;
   margin-left: 20px;
   margin-top: 40px;
+  margin-right: 20px;
 }
 
 .restaurant_nom {
@@ -330,7 +344,7 @@ h4 {
   line-height: 5px;
 }
 
-a {
+main a {
   text-decoration: none;
   background-color: white;
 }
@@ -340,49 +354,50 @@ a {
   justify-content: right;
   position: relative;
   top: -35px;
-  left: -50px;
+  left: -25px;
   font-size: 32px;
 }
 
 footer {
   background-color: rgb(77, 77, 77);
-  /*width: 100%; a retirer pour la marge sur menu principale*/
-  position: absolute;
-  max-width: 1400px;
-  margin: auto;
+  line-height: 32px;
+  padding-bottom: 15px;
+  font-family: 'Roboto';
 }
 
 .footer_logo {
-  width: 100%;
-  padding: 25px;
-  margin-left: 11px;
-  display: flex;
-  justify-content: space-between;
-  font-size: 30px;
   font-family: "Shrikhand";
+  display: flex;
+  align-items: center;
+  margin-left: 25px;
+  padding-top: 25px;
+  font-size: 27px;
   color: white;
-} 
-
-.footer_icone_main {
-  margin-left: -7px;
-}
-
-footer a{
-background-color: transparent;
-color: white;
 }
 
 footer ul {
   list-style-type: none;
+}
+
+footer a {
+  text-decoration: none;
   color: white;
-  margin-top: -5px;
-  line-height: 35px;
+}
+
+.footer_icone_ustensiles {
+  color: white;
+  padding: 9px;
+}
+
+.footer_icone_main {
+  color: white;
+  padding: 5px;
 }
 
 /*tablettes à partir de 768px*/
 @media all and (min-width: 768px) {
   body {
-    width: 120%;
+    width: 100%;
     height: 100%;
     margin: 0;
     padding: 0;
@@ -392,7 +407,7 @@ footer ul {
   .point {
     height: 30px;
     width: 30px;
-}
+  }
 
   .restaurant_img {
     width: 100%;
@@ -403,7 +418,7 @@ footer ul {
   }
 
   footer {
-    width: 120%;
+    width: 100%;
   }
 }
 
@@ -413,8 +428,23 @@ footer ul {
   .point {
     height: 50px;
     width: 50px;
-}
+  }
 
+  #position_div input {
+    margin-left: 10px;
+  }
+
+  .vignette_annotation {
+top: -480px;
+  }
+
+  .restaurant_img img {
+    height: 500px;
+  }
+
+  #restaurant_nouveau, #restaurant_ancien {
+    width: 50%;
+  }
 
 
 }
