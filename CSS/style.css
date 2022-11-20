@@ -80,7 +80,7 @@ body {
 }
 
 #position_div i {
-  border: 2px solid red;
+  margin-left: 95px;
 }
 
 #position_div input {
