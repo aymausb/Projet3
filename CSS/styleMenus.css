@@ -40,7 +40,7 @@ nav a {
 
 #restaurant_carte h2 {
   display: block;
-  font-size: 1.5em;
+  font-size: 25px;
   margin: 30px 20px 20px 20px;
   font-weight: bold;
   font-family: "Shrikhand";
@@ -54,14 +54,31 @@ nav a {
 
 .restaurant_texte_icone {
   margin-right: 30px;
+  display: flex;
+}
+
+main button {
+  border: 0px solid transparent;
+  background-color: transparent;
+}
+
+.icone_like1 {
+  /*position: relative;
+  left: 56px;*/
+}
+
+.icone_like2 {
+  /*border: 2px solid red;*/
+  
 }
 
 #menu_bloc h3 {
   font-weight: 400;
+  font-size: 20px;
 }
 
 #menu_bloc hr {
-  width: 60px;
+  width: 50px;
   height: 3px;
   background-color: aquamarine;
   border: transparent;
@@ -76,6 +93,13 @@ nav a {
   width: 90%;
 }
 
+.bloc_entrees_titre,
+.bloc_plats_titre,
+.bloc_desserts_titre {
+  margin-bottom: 30px;
+  margin-top: 30px;
+}
+
 .entrees_choix,
 .plats_choix,
 .desserts_choix {
@@ -84,11 +108,127 @@ nav a {
   display: flex;
   margin: 20px 0 20px 0;
   background-color: white;
-  border-radius: 25px;
+  border-radius: 17px;
   padding: 10px;
   box-shadow: 6px -6px 5px 1px rgba(186, 186, 186, 0.32);
   -webkit-box-shadow: 6px -6px 5px 1px rgba(186, 186, 186, 0.32);
   -moz-box-shadow: 6px -6px 5px 1px rgba(186, 186, 186, 0.32);
+
+}
+
+#entrees_1 {
+  animation: monter 1s linear forwards;
+  margin-top: 10%;
+  opacity: 0;
+  animation-delay: 0s;
+}
+
+#entrees_2 {
+  animation: monter 1s linear forwards;
+  margin-top: 10%;
+  opacity: 0;
+  animation-delay: 0.2s;
+}
+
+#entrees_3 {
+  animation: monter 1s linear forwards;
+  margin-top: 10%;
+  opacity: 0;
+  animation-delay: 0.4s;
+}
+
+#entrees_4 {
+  animation: monter 1s linear forwards;
+  margin-top: 10%;
+  opacity: 0;
+  animation-delay: 0.6s;
+}
+
+#plats_1 {
+  animation: monter 1s linear forwards;
+  margin-top: 10%;
+  opacity: 0;
+  animation-delay: 0.8s;
+}
+
+#plats_2 {
+  animation: monter 1s linear forwards;
+  margin-top: 10%;
+  opacity: 0;
+  animation-delay: 0.9s;
+}
+
+#plats_3 {
+  animation: monter 1s linear forwards;
+  margin-top: 10%;
+  opacity: 0;
+  animation-delay: 1.1s;
+}
+
+#plats_4 {
+  animation: monter 1s linear forwards;
+  margin-top: 10%;
+  opacity: 0;
+  animation-delay: 1.3s;
+}
+
+#desserts_1 {
+  animation: monter 1s linear forwards;
+  margin-top: 10%;
+  opacity: 0;
+  animation-delay: 1.5s;
+}
+
+#desserts_2 {
+  animation: monter 1s linear forwards;
+  margin-top: 10%;
+  opacity: 0;
+  animation-delay: 1.7s;
+}
+
+#desserts_3 {
+  animation: monter 1s linear forwards;
+  margin-top: 10%;
+  opacity: 0;
+  animation-delay: 1.9s;
+}
+
+#desserts_4 {
+  animation: monter 1s linear forwards;
+  margin-top: 10%;
+  opacity: 0;
+  animation-delay: 2.1s;
+}
+
+@keyframes monter {
+  30% {
+    margin-top: 7%;
+    opacity: 0.3;
+  }
+
+  60% {
+    margin-top: 4%;
+    opacity: 0.6;
+  }
+
+  100% {
+    margin-top: 0%;
+    opacity: 1;
+  }
+}
+
+@keyframes apparition {
+  0% {
+    width: 90%;
+  }
+
+  50% {
+    width: 60%
+  }
+
+  100% {
+    width: 75%;
+  }
 }
 
 .vignette_details {
@@ -133,6 +273,58 @@ nav a {
   align-items: center;
   width: 15%;
   font-size: 15px;
+  background-color: #99E2D0;
+  border-radius: 0 17px 17px 0;
+  padding: 10px;
+  margin: -10px;
+  transition-property: width;
+  transition-duration: 500ms;
+  visibility: hidden;
+  animation: apparition 1s linear;
+}
+
+#check {
+  color: white;
+}
+
+@keyframes apparition {
+0% {
+  width: 0%;
+}
+
+100% {
+  width: 15%;
+}
+
+}
+
+.entrees_choix,
+.plats_choix,
+.desserts_choix:hover .validation {
+  visibility: visible;
+}
+
+.entrees_choix,.plats_choix,.desserts_choix:hover {
+  overflow: hidden;
+}
+
+.entrees_choix,.plats_choix,.desserts_choix:hover i {
+  animation: rotation-valide 500ms forwards;
+}
+
+@keyframes rotation-valide {
+
+  0% {
+    transform: rotateZ(0deg);
+  }
+
+  50% {
+    transform: rotateZ(180deg);
+  }
+
+  100% {
+    transform: rotateZ(360deg);
+  }
 }
 
 #nav_div {
@@ -167,12 +359,13 @@ footer {
   align-items: center;
   margin-left: 40px;
   padding-top: 25px;
-  font-size: 27px;
+  font-size: 25px;
   color: white;
 }
 
 footer ul {
   list-style-type: none;
+  font-size: 18px;
 }
 
 footer a {
@@ -190,87 +383,118 @@ footer a {
   padding: 5px;
 }
 
+
+
+
+
 /*version desktop*/
 @media all and (min-width: 992px) {
 
-#header_logo {
-    width: 20%;
+  #header_logo {
+    width: 18%;
   }
 
-#header_img {
-  height: 900px;
-}
+  #header_img {
+    height: 900px;
+  }
 
-nav a {
-    font-size: 40px;
+  nav a {
+    font-size: 70px;
   }
 
   #restaurant_carte h2 {
-  font-size: 55px;
-  margin-top: 80px;
-}
+    font-size: 100px;
+    margin-top: 100px;
+    font-weight: 100;
 
-.restaurant_nom h2{
-margin-left: 95px;
-font-size: 65px;
-}
+  }
 
-.restaurant_texte_icone {
-  font-size: 55px;
-  margin-top: 60px;
-  margin-right: 55px;
-}
+  .restaurant_titre {
+    justify-content: space-around;
+  }
 
-#menu_bloc {
-  display: flex;
-  justify-content: center;
-  align-items: center;
-}
+  .restaurant_nom h2 {
+    margin-left: 95px;
+    font-size: 65px;
+  }
 
-#menu_bloc h3 {
-  font-size: 40px;
-}
+  .restaurant_texte_icone {
+    font-size: 55px;
+    margin-top: 60px;
+    margin-right: 155px;
+  }
 
-#menu_bloc hr {
-  width: 100px;
-  height: 8px;
-}
+  #menu_bloc {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+  }
 
-.entrees_choix,
-.plats_choix,
-.desserts_choix {
-  margin: 45px 0px 45px 0;
-  height: 70px;
-  width: 100%;
-  padding: 25px;
-}
+  #menu_bloc h3 {
+    font-size: 60px;
+  }
 
-.vignette_details {
-  justify-content: center;
-  line-height: 40px;
-}
+  #menu_bloc hr {
+    width: 100px;
+    height: 8px;
+    margin-bottom: 70px;
+  }
 
-.bold {
-  font-size: 25px;
-}
+  #bloc_entrees,
+  #bloc_plats,
+  #bloc_desserts {
+    margin: 25px;
+  }
 
-.vignette_texte {
-  font-size: 19px;
-}
+  .entrees_choix,
+  .plats_choix,
+  .desserts_choix {
+    margin: 45px 0px 45px 0;
+    height: 130px;
+    width: 98%;
+    padding: 25px;
+  }
 
-.vignette_prix {
-  font-size: 25px;
-}
+  .vignette_details {
+    justify-content: center;
+    line-height: 70px;
+  }
 
-.validation {
-  font-size: 23px;
-}
+  .bold {
+    font-size: 45px;
+  }
 
-#nav_div button {
-  font-size: 35px;
-  padding: 30px 60px 30px 60px;
-}
+  .vignette_texte {
+    font-size: 40px;
+  }
 
+  .vignette_prix {
+    font-size: 50px;
+  }
+
+  .validation {
+    font-size: 45px;
+  }
+
+  #nav_div button {
+    font-size: 50px;
+    padding: 60px 90px 60px 90px;
+  }
+
+  footer {
+    line-height: 75px;
+  }
+
+  .footer_logo {
+    margin-left: 65px;
+    padding-top: 65px;
+    font-size: 65px;
+  }
+
+  footer ul {
+    font-size: 55px;
+  }
 
 
 
