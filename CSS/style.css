@@ -254,17 +254,19 @@ body {
   background-color: aquamarine;
 }
 
-.icone_like1 {
+.coeur {
   border: 0 solid transparent;
   cursor: pointer;
   position: relative;
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
 }
 
-.icone_like1:hover {
+.coeur:hover {
   animation: vide 1s;
 }
 
-.icone_like2 {
+/*.icone_like2 {
   border: 0 solid transparent;
   cursor: pointer;
   opacity: 0;
@@ -285,7 +287,7 @@ body {
   100% {
     opacity: 0;
   }
-}
+}*/
 
 @keyframes remplis {
   0% {
@@ -295,15 +297,13 @@ body {
   50% {
     opacity: 0.5;
     background: linear-gradient(#9356dc, #ff79da);
-    -webkit-background-clip: text;
-    -webkit-text-fill-color: transparent;
+
   }
 
   100% {
     opacity: 1;
     background: linear-gradient(#9356dc, #ff79da);
-    -webkit-background-clip: text;
-    -webkit-text-fill-color: transparent;
+
   }
 }
 
@@ -435,14 +435,15 @@ footer a {
   }
 
   .vignette_annotation {
-top: -480px;
+    top: -480px;
   }
 
   .restaurant_img img {
     height: 500px;
   }
 
-  #restaurant_nouveau, #restaurant_ancien {
+  #restaurant_nouveau,
+  #restaurant_ancien {
     width: 50%;
   }
 

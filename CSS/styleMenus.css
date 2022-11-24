@@ -52,24 +52,65 @@ nav a {
   justify-content: space-between;
 }
 
-.restaurant_texte_icone {
+/*.restaurant_texte_icone {
   margin-right: 30px;
-  display: flex;
+  display: flex;*/
 }
 
-main button {
+/*main button {
   border: 0px solid transparent;
   background-color: transparent;
+}*/
+
+
+.coeur {
+  cursor: pointer;
+  position: relative;
+  background-clip: text;
+  -webkit-text-fill-color: black;
 }
 
-.icone_like1 {
-  /*position: relative;
-  left: 56px;*/
+.coeur:hover {
+  animation: remplis 1s linear forwards;
 }
 
-.icone_like2 {
-  /*border: 2px solid red;*/
-  
+/*.icone_like2 {
+  border: 0 solid transparent;
+  cursor: pointer;
+  opacity: 0;
+  position: absolute;
+  top: 32px;
+  color: white;
+}
+
+.icone_like2:hover {
+  animation: remplis 1s linear forwards;
+}*/
+
+/*@keyframes vide {
+  0% {
+    opacity: 0.5;
+  }
+
+  100% {
+    opacity: 0;
+  }
+}*/
+
+@keyframes remplis {
+  0% {
+    opacity: 0;
+  }
+
+  50% {
+    opacity: 0.5;
+    background: -webkit-linear-gradient(#9356dc, #ff79da);
+  }
+
+  100% {
+    opacity: 1;
+    background: -webkit-linear-gradient(#9356dc, #ff79da);
+  }
 }
 
 #menu_bloc h3 {
@@ -232,7 +273,7 @@ main button {
 }
 
 .vignette_details {
-  width: 70%;
+  width: 80%;
   line-height: 20px;
   font-size: 15px;
   display: flex;
@@ -240,6 +281,7 @@ main button {
   white-space: nowrap;
   overflow: hidden;
   text-overflow: ellipsis;
+  
 }
 
 .bold {
@@ -262,54 +304,64 @@ main button {
   display: flex;
   justify-content: center;
   align-items: flex-end;
-  width: 15%;
+  width: 20%;
   font-weight: 600;
   padding-bottom: 2px;
 }
 
 .validation {
-  display: flex;
+  display: none;
   justify-content: center;
   align-items: center;
-  width: 15%;
+  width: 0%;
   font-size: 15px;
   background-color: #99E2D0;
+  color: white;
   border-radius: 0 17px 17px 0;
   padding: 10px;
   margin: -10px;
   transition-property: width;
   transition-duration: 500ms;
-  visibility: hidden;
-  animation: apparition 1s linear;
-}
-
-#check {
-  color: white;
+  animation: apparition 0.5s forwards linear;
 }
 
 @keyframes apparition {
 0% {
   width: 0%;
+  
 }
 
 100% {
-  width: 15%;
+  width: 20%;
 }
+}
+
+@keyframes reduirevignette {
+0% {
+width: 80%;
 
 }
 
-.entrees_choix,
-.plats_choix,
-.desserts_choix:hover .validation {
-  visibility: visible;
+100%{
+width: 60%;
+}
 }
 
-.entrees_choix,.plats_choix,.desserts_choix:hover {
+
+.entrees_choix:hover .validation, .plats_choix:hover .validation, .desserts_choix:hover .validation {
+  display: flex;
+}
+
+.entrees_choix:hover {
   overflow: hidden;
 }
 
-.entrees_choix,.plats_choix,.desserts_choix:hover i {
+.entrees_choix:hover i {
   animation: rotation-valide 500ms forwards;
+}
+
+.entrees_choix:hover .vignette_details {
+  animation: reduirevignette 0.5s forwards linear;
 }
 
 @keyframes rotation-valide {
