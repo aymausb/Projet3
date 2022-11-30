@@ -52,42 +52,39 @@ nav a {
   justify-content: space-between;
 }
 
-/*.restaurant_texte_icone {
-  margin-right: 30px;
+.restaurant_texte_icone {
+  /*margin-right: 30px;
   display: flex;*/
+  border: 0 solid transparent;
+  position: absolute;
+  top: 17px;
+  right: 20px;
 }
 
-/*main button {
-  border: 0px solid transparent;
-  background-color: transparent;
-}*/
-
-
-.coeur {
+.icone_like1 {
+  border: 0 solid transparent;
   cursor: pointer;
   position: relative;
-  background-clip: text;
-  -webkit-text-fill-color: black;
 }
 
-.coeur:hover {
-  animation: remplis 1s linear forwards;
+.icone_like1:hover {
+  animation: vide 1s;
 }
 
-/*.icone_like2 {
+.icone_like2 {
   border: 0 solid transparent;
   cursor: pointer;
   opacity: 0;
   position: absolute;
-  top: 32px;
+  top: 0px;
   color: white;
 }
 
 .icone_like2:hover {
-  animation: remplis 1s linear forwards;
-}*/
+  animation: remplis 2s ease-in-out both;
+}
 
-/*@keyframes vide {
+@keyframes vide {
   0% {
     opacity: 0.5;
   }
@@ -95,7 +92,7 @@ nav a {
   100% {
     opacity: 0;
   }
-}*/
+}
 
 @keyframes remplis {
   0% {
@@ -104,12 +101,16 @@ nav a {
 
   50% {
     opacity: 0.5;
-    background: -webkit-linear-gradient(#9356dc, #ff79da);
+    background: linear-gradient(#9356dc, #ff79da);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
   }
 
   100% {
     opacity: 1;
-    background: -webkit-linear-gradient(#9356dc, #ff79da);
+    background-image: linear-gradient(#9356dc, #ff79da);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
   }
 }
 
@@ -281,7 +282,7 @@ nav a {
   white-space: nowrap;
   overflow: hidden;
   text-overflow: ellipsis;
-  
+
 }
 
 .bold {
@@ -326,29 +327,29 @@ nav a {
 }
 
 @keyframes apparition {
-0% {
-  width: 0%;
-  
-}
+  0% {
+    width: 0%;
+  }
 
-100% {
-  width: 20%;
-}
+  100% {
+    width: 20%;
+  }
 }
 
 @keyframes reduirevignette {
-0% {
-width: 80%;
+  0% {
+    width: 80%;
+  }
 
+  100% {
+    width: 60%;
+  }
 }
 
-100%{
-width: 60%;
-}
-}
 
-
-.entrees_choix:hover .validation, .plats_choix:hover .validation, .desserts_choix:hover .validation {
+.entrees_choix:hover .validation,
+.plats_choix:hover .validation,
+.desserts_choix:hover .validation {
   display: flex;
 }
 
@@ -527,6 +528,8 @@ footer a {
 
   .validation {
     font-size: 45px;
+    margin: -26px;
+    padding: 26px;
   }
 
   #nav_div button {
@@ -547,17 +550,5 @@ footer a {
   footer ul {
     font-size: 55px;
   }
-
-
-
-
-
-
-
-
-
-
-
-
 
 }

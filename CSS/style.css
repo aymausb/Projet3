@@ -90,7 +90,6 @@ body {
   margin-left: 15px;
   font-weight: 700;
   background-color: gainsboro;
-  /*text-align: center;*/
 }
 
 ::placeholder {
@@ -254,59 +253,6 @@ body {
   background-color: aquamarine;
 }
 
-.coeur {
-  border: 0 solid transparent;
-  cursor: pointer;
-  position: relative;
-  -webkit-background-clip: text;
-  -webkit-text-fill-color: transparent;
-}
-
-.coeur:hover {
-  animation: vide 1s;
-}
-
-/*.icone_like2 {
-  border: 0 solid transparent;
-  cursor: pointer;
-  opacity: 0;
-  position: absolute;
-  top: 2px;
-  color: #f6f6f6;
-}
-
-.icone_like2:hover {
-  animation: remplis 2s ease-in-out both;
-}
-
-@keyframes vide {
-  0% {
-    opacity: 0.5;
-  }
-
-  100% {
-    opacity: 0;
-  }
-}*/
-
-@keyframes remplis {
-  0% {
-    opacity: 0;
-  }
-
-  50% {
-    opacity: 0.5;
-    background: linear-gradient(#9356dc, #ff79da);
-
-  }
-
-  100% {
-    opacity: 1;
-    background: linear-gradient(#9356dc, #ff79da);
-
-  }
-}
-
 .restaurant {
   display: flex;
   flex-wrap: wrap;
@@ -334,6 +280,68 @@ h4 {
   font-size: 25px;
 }
 
+.restaurant_texte_icone {
+  border: 0 solid transparent;
+  background-color: whitesmoke;
+  position: relative;
+  top: -36px;
+  right: -280px;
+  font-size: 25px;
+}
+
+.icone_like1 {
+  border: 0 solid transparent;
+  cursor: pointer;
+  position: relative;
+}
+
+.icone_like1:hover {
+  animation: vide 1s;
+}
+
+.icone_like2 {
+  border: 0 solid transparent;
+  cursor: pointer;
+  opacity: 0;
+  position: absolute;
+  top: 0px;
+  color: white;
+}
+
+.icone_like2:hover {
+  animation: remplis 2s ease-in-out both;
+}
+
+@keyframes vide {
+  0% {
+    opacity: 0.5;
+  }
+
+  100% {
+    opacity: 0;
+  }
+}
+
+@keyframes remplis {
+  0% {
+    opacity: 0;
+  }
+
+  50% {
+    opacity: 0.5;
+    background: linear-gradient(#9356dc, #ff79da);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+  }
+
+  100% {
+    opacity: 1;
+    background-image: linear-gradient(#9356dc, #ff79da);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+  }
+}
+
 #restaurant_nouveau .restaurant_nom {
   margin-top: -53px;
   line-height: 5px;
@@ -347,15 +355,6 @@ h4 {
 main a {
   text-decoration: none;
   background-color: white;
-}
-
-.restaurant_nom i {
-  display: flex;
-  justify-content: right;
-  position: relative;
-  top: -35px;
-  left: -25px;
-  font-size: 32px;
 }
 
 footer {
@@ -394,7 +393,11 @@ footer a {
   padding: 5px;
 }
 
+
+
+
 /*tablettes à partir de 768px*/
+
 @media all and (min-width: 768px) {
   body {
     width: 100%;
@@ -422,7 +425,11 @@ footer a {
   }
 }
 
+
+
+
 /*version desktop*/
+
 @media all and (min-width: 992px) {
 
   .point {
@@ -430,12 +437,101 @@ footer a {
     width: 50px;
   }
 
+  #nav_div img {
+    width: 100%;
+    height: 130px;
+    padding: 25px;
+  }
+
   #position_div input {
-    margin-left: 10px;
+    font-size: 50px;
+    font-weight: 700;
+  }
+
+  #position_div i {
+    font-size: 50px;
+    margin-left: 295px;
+  }
+
+  #position_div input {
+    margin-left: 15px;
+    font-weight: 700;
+
+  }
+
+  #filtre_div {
+    margin-bottom: 200px;
+  }
+
+  #filtre_div li {
+    height: 160px;
+    margin-bottom: 75px !important;
+  }
+
+  .filtre_numero {
+    width: 100px;
+    height: 100px;
+    font-size: 50px;
+  }
+
+.filtre_element li {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+
+  #filtre_titre h2 {
+    justify-content: center;
+    margin-top: 100px;
+    margin-bottom: 100px;
+  }
+
+  .titre h3 {
+    font-size: 50px;
+  }
+
+  #presentation {
+    font-size: 45px;
+    margin-top: 50px;
+  }
+
+  .recherche_div button {
+    height: 135px;
+    font-size: 45px;
+  }
+
+
+
+  .restaurant_texte_icone {
+    border: 0 solid transparent;
+    background-color: whitesmoke;
+    position: relative;
+    top: -65px;
+    right: -2329px;
+    font-size: 50px;
+  }
+
+  ol {
+    font-size: 45px;
+
+  }
+
+  h2 {
+    font-size: 70px;
+  }
+
+  #vignette_titre {
+    font-size: 50px;
+  }
+
+  #vignette_titre h2 {
+    margin-bottom: 70px;
   }
 
   .vignette_annotation {
     top: -480px;
+    font-size: 55px;
   }
 
   .restaurant_img img {
@@ -447,5 +543,35 @@ footer a {
     width: 50%;
   }
 
+  #restaurant_nouveau .restaurant_nom {
+    font-size: 35px;
+  }
+
+  #restaurant_ancien .restaurant_nom {
+    font-size: 35px;
+    margin-top: 11px;
+  }
+
+  .restaurant_nom {
+    padding: 20px;
+  }
+
+  h4 {
+    margin-top: 30px;
+    font-weight: 600;
+    font-family: "Roboto";
+    font-size: 45px;
+  }
+
+  .footer_logo {
+    font-size: 50px;
+    margin-left: 45px;
+    font-size: 65px;
+  }
+
+  footer {
+    line-height: 70px;
+    font-size: 40px;
+  }
 
 }
