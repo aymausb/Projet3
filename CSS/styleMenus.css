@@ -1,7 +1,7 @@
 body {
+  font-family: "Roboto", sans-serif;
   margin: auto;
   padding: auto;
-  font-family: "Roboto", sans-serif;
 }
 
 header {
@@ -53,18 +53,39 @@ nav a {
 }
 
 .restaurant_texte_icone {
-  /*margin-right: 30px;
-  display: flex;*/
   border: 0 solid transparent;
   position: absolute;
-  top: 17px;
-  right: 20px;
+  top: 35px;
+  right: 45px;
 }
 
-.icone_like1 {
+.icone_like2 {
+  background: linear-gradient(#9356dc, #ff79da);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  opacity: 0;
+}
+
+.icone_like1,
+.icone_like2 {
+  cursor: pointer;
+  position: absolute;
+  transition: opacity .5s ease-in-out;
+}
+
+.restaurant_texte_icone:hover .icone_like1 {
+  opacity: 0;
+}
+
+.restaurant_texte_icone:hover .icone_like2 {
+  opacity: 1;
+}
+
+/*.icone_like1 {
   border: 0 solid transparent;
   cursor: pointer;
   position: relative;
+  bottom: -67px;
 }
 
 .icone_like1:hover {
@@ -112,7 +133,7 @@ nav a {
     -webkit-background-clip: text;
     -webkit-text-fill-color: transparent;
   }
-}
+}*/
 
 #menu_bloc h3 {
   font-weight: 400;
@@ -155,7 +176,6 @@ nav a {
   box-shadow: 6px -6px 5px 1px rgba(186, 186, 186, 0.32);
   -webkit-box-shadow: 6px -6px 5px 1px rgba(186, 186, 186, 0.32);
   -moz-box-shadow: 6px -6px 5px 1px rgba(186, 186, 186, 0.32);
-
 }
 
 #entrees_1 {
@@ -346,22 +366,21 @@ nav a {
   }
 }
 
-
 .entrees_choix:hover .validation,
 .plats_choix:hover .validation,
 .desserts_choix:hover .validation {
   display: flex;
 }
 
-.entrees_choix:hover {
+.entrees_choix:hover, .plats_choix:hover, .desserts_choix:hover {
   overflow: hidden;
 }
 
-.entrees_choix:hover i {
+.entrees_choix:hover i, .plats_choix:hover i, .desserts_choix:hover i {
   animation: rotation-valide 500ms forwards;
 }
 
-.entrees_choix:hover .vignette_details {
+.entrees_choix:hover .vignette_details, .plats_choix:hover .vignette_details, .desserts_choix:hover .vignette_details {
   animation: reduirevignette 0.5s forwards linear;
 }
 
@@ -459,7 +478,6 @@ footer a {
     font-size: 100px;
     margin-top: 100px;
     font-weight: 100;
-
   }
 
   .restaurant_titre {
@@ -475,6 +493,8 @@ footer a {
     font-size: 55px;
     margin-top: 60px;
     margin-right: 155px;
+    top: 80px;
+    right: 805px;
   }
 
   #menu_bloc {
@@ -550,5 +570,4 @@ footer a {
   footer ul {
     font-size: 55px;
   }
-
 }

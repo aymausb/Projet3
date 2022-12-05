@@ -182,10 +182,10 @@ body {
 
 .filtre_numero {
   border: 2px solid white;
-  font-size: 20px;
+  font-size: 25px;
   border-radius: 100px;
-  width: 30px;
-  height: 30px;
+  width: 65px;
+  height: 55px;
   margin-right: 18px;
   margin-left: -35px;
   display: flex;
@@ -245,12 +245,14 @@ body {
   width: 96%;
   position: relative;
   top: -230px;
-  font-size: 30px;
+  font-size: 20px;
   color: green;
 }
 
 .vignette_annotation span {
   background-color: aquamarine;
+  padding: 10px;
+  border-radius: 5px;
 }
 
 .restaurant {
@@ -284,12 +286,33 @@ h4 {
   border: 0 solid transparent;
   background-color: whitesmoke;
   position: relative;
-  top: -36px;
-  right: -280px;
+  top: -65px;
+  right: -315px;
   font-size: 25px;
 }
 
-.icone_like1 {
+.icone_like2 {
+  background: linear-gradient(#9356dc, #ff79da);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  opacity: 0;
+}
+
+.icone_like1,
+.icone_like2 {
+  cursor: pointer;
+  position: absolute;
+  transition: opacity .5s ease-in-out;
+}
+
+.restaurant_texte_icone:hover .icone_like1 {
+  opacity: 0;
+}
+
+.restaurant_texte_icone:hover .icone_like2 {
+  opacity: 1;
+}
+/*.icone_like1 {
   border: 0 solid transparent;
   cursor: pointer;
   position: relative;
@@ -340,16 +363,22 @@ h4 {
     -webkit-background-clip: text;
     -webkit-text-fill-color: transparent;
   }
+}*/
+
+#restaurant_nouveau a {
+  color: black;
 }
 
 #restaurant_nouveau .restaurant_nom {
-  margin-top: -53px;
+  margin-top: -60px;
+  margin-bottom: 15px;
   line-height: 5px;
 }
 
 #restaurant_ancien .restaurant_nom {
   margin-top: -15px;
   line-height: 5px;
+  margin-bottom: 15px;
 }
 
 main a {
@@ -456,7 +485,6 @@ footer a {
   #position_div input {
     margin-left: 15px;
     font-weight: 700;
-
   }
 
   #filtre_div {
@@ -464,7 +492,7 @@ footer a {
   }
 
   #filtre_div li {
-    height: 160px;
+    height: 200px;
     margin-bottom: 75px !important;
   }
 
@@ -474,12 +502,11 @@ footer a {
     font-size: 50px;
   }
 
-.filtre_element li {
-  display: flex;
-  justify-content: center;
-  align-items: center;
-}
-
+  .filtre_element li {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
 
   #filtre_titre h2 {
     justify-content: center;
@@ -501,20 +528,16 @@ footer a {
     font-size: 45px;
   }
 
-
-
   .restaurant_texte_icone {
-    border: 0 solid transparent;
     background-color: whitesmoke;
     position: relative;
-    top: -65px;
-    right: -2329px;
-    font-size: 50px;
+    top: -140px;
+    left: 2710px;
+    font-size: 60px;
   }
 
   ol {
     font-size: 45px;
-
   }
 
   h2 {
@@ -534,6 +557,11 @@ footer a {
     font-size: 55px;
   }
 
+  .vignette_annotation span {
+    padding: 20px;
+    border-radius: 20px;
+  }
+
   .restaurant_img img {
     height: 500px;
   }
@@ -545,17 +573,22 @@ footer a {
 
   #restaurant_nouveau .restaurant_nom {
     font-size: 35px;
+    margin-top: -80px;
+    padding: 11px;
+    margin-bottom: 50px;
   }
 
   #restaurant_ancien .restaurant_nom {
     font-size: 35px;
     margin-top: 11px;
+    margin-bottom: 45px;
   }
 
   .restaurant_nom {
     padding: 20px;
   }
 
+  
   h4 {
     margin-top: 30px;
     font-weight: 600;
@@ -573,5 +606,4 @@ footer a {
     line-height: 70px;
     font-size: 40px;
   }
-
 }
