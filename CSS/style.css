@@ -61,11 +61,11 @@ body {
   display: flex;
   justify-content: center;
   text-align: center;
+  width: 100%;
 }
 
 #nav_div img {
-  width: 70%;
-  height: 60px;
+  width: 60%;
   padding: 20px;
 }
 
@@ -80,7 +80,7 @@ body {
 }
 
 #position_div i {
-  margin-left: 95px;
+  /*margin-left: 95px;*/
 }
 
 #position_div input {
@@ -119,6 +119,8 @@ body {
   justify-content: center;
   font-family: "Roboto";
   text-align: center;
+  margin-block-start: 0em;
+  margin-block-end: 0em;
 }
 
 .recherche_div button {
@@ -127,8 +129,8 @@ body {
   align-items: center;
   text-align: center;
   margin: auto;
-  margin-top: 40px;
-  margin-bottom: 100px;
+  /*margin-top: 40px;
+  margin-bottom: 100px;*/
   border-radius: 100px;
   height: 55px;
   font-size: 19px;
@@ -136,10 +138,16 @@ body {
   padding-right: 25px;
   background: linear-gradient(#ff79da, #9356dc);
   color: white;
+  border: 0 solid transparent;
+  box-shadow: 0px 3px 8px 7px rgba(125, 125, 125, 0.32);
 }
 
 .recherche_div {
-  padding-bottom: 1px;
+  /*padding-bottom: 1px;*/
+  padding: 50px;
+}
+main {
+  box-sizing: border-box;
 }
 
 #filtre_titre h2 {
@@ -165,6 +173,10 @@ body {
   margin-bottom: 50px;
 }
 
+#filtre_liste {
+ 
+}
+
 .filtre_element_icone {
   padding-left: 15px;
   padding-right: 15px;
@@ -182,12 +194,12 @@ body {
 
 .filtre_numero {
   border: 2px solid white;
-  font-size: 25px;
+  /*font-size: 25px;*/
   border-radius: 100px;
-  width: 65px;
-  height: 55px;
-  margin-right: 18px;
-  margin-left: -35px;
+  width: 25px;
+  height: 25px;
+  /*margin-right: 18px;*/
+  margin-left: -17px;
   display: flex;
   justify-content: center;
   align-items: center;
@@ -203,16 +215,20 @@ body {
   border-radius: 28px;
   height: 74px;
   width: auto;
-  margin-bottom: 30px !important;
-  padding: 20px;
+  /*margin-bottom: 30px !important;
+  padding: 20px;*/
   font-family: "Roboto";
   font-weight: bold;
-  font-size: larger;
+  /*font-size: larger;*/
   background-color: whitesmoke;
 }
 
 #filtre_div ol :hover {
   background-color: #f5effd;
+}
+
+#filtre_div ol :hover i{
+color: #9356dc;
 }
 
 #vignette {
@@ -227,9 +243,13 @@ body {
 #vignette_titre h2 {
   display: flex;
   justify-content: flex-start;
-  margin-bottom: -15px;
+  /*margin-bottom: -15px;*/
   margin-top: 60px;
   margin-left: 20px;
+}
+
+#restaurant_nouveau, #restaurant_ancien {
+  width: 100%;
 }
 
 .restaurant_img img {
@@ -265,9 +285,9 @@ body {
 .vignette_restaurant {
   border: 1px solid gray;
   border-radius: 22px;
-  margin-left: 20px;
+  /*margin-left: 20px;
+  margin-right: 20px;*/
   margin-top: 40px;
-  margin-right: 20px;
 }
 
 .restaurant_nom {
@@ -285,10 +305,11 @@ h4 {
 .restaurant_texte_icone {
   border: 0 solid transparent;
   background-color: whitesmoke;
-  position: relative;
+  /*position: relative;
   top: -65px;
-  right: -315px;
+  right: -315px;*/
   font-size: 25px;
+  margin-right: 50px;
 }
 
 .icone_like2 {
@@ -312,6 +333,7 @@ h4 {
 .restaurant_texte_icone:hover .icone_like2 {
   opacity: 1;
 }
+
 /*.icone_like1 {
   border: 0 solid transparent;
   cursor: pointer;
@@ -369,21 +391,40 @@ h4 {
   color: black;
 }
 
-#restaurant_nouveau .restaurant_nom {
-  margin-top: -60px;
-  margin-bottom: 15px;
-  line-height: 5px;
+.restaurant_nom h4 {
+  margin-block-start: 0;
+  margin-block-end: 0;
+  margin-inline-start: 0px;
+  margin-inline-end: 0px;
+  font-weight: bold;
 }
 
-#restaurant_ancien .restaurant_nom {
+#restaurant_nouveau .restaurant_nom, #restaurant_ancien .restaurant_nom {
+  /*margin-top: -60px;*/
+  margin-bottom: 15px;
+  /*line-height: 5px;*/
+  display: flex;
+  justify-content: space-between;
+}
+
+/*#restaurant_ancien .restaurant_nom {
   margin-top: -15px;
   line-height: 5px;
   margin-bottom: 15px;
+}*/
+
+#restaurant_ancien img{
+  margin-bottom: 45px;
 }
 
 main a {
   text-decoration: none;
   background-color: white;
+  display: block;
+  margin-bottom: 20px;
+  margin-left: 20px;
+  margin-right: 20px;
+  border-radius: 22px;
 }
 
 footer {
@@ -446,7 +487,7 @@ footer a {
   }
 
   .vignette_restaurant {
-    width: 95%;
+    width: 100%;
   }
 
   footer {
@@ -488,18 +529,28 @@ footer a {
   }
 
   #filtre_div {
-    margin-bottom: 200px;
+    /*margin-bottom: 200px;*/
+  }
+
+  .filtre_element {
+    width: 45%;
   }
 
   #filtre_div li {
-    height: 200px;
+    height: 100px;
     margin-bottom: 75px !important;
   }
 
+  #filtre_liste {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+  }
+
   .filtre_numero {
-    width: 100px;
-    height: 100px;
-    font-size: 50px;
+    width: 50px;
+    height: 50px;
+    font-size: 30px;
   }
 
   .filtre_element li {
@@ -524,20 +575,21 @@ footer a {
   }
 
   .recherche_div button {
-    height: 135px;
-    font-size: 45px;
+    height: 90px;
+    font-size: 30px;
   }
 
   .restaurant_texte_icone {
     background-color: whitesmoke;
-    position: relative;
+    /*position: relative;
     top: -140px;
-    left: 2710px;
+    left: 2710px;*/
     font-size: 60px;
+    margin-right: 100px;
   }
 
   ol {
-    font-size: 45px;
+    font-size: 35px;
   }
 
   h2 {
@@ -580,7 +632,7 @@ footer a {
 
   #restaurant_ancien .restaurant_nom {
     font-size: 35px;
-    margin-top: 11px;
+    /*margin-top: 11px;*/
     margin-bottom: 45px;
   }
 
@@ -588,12 +640,12 @@ footer a {
     padding: 20px;
   }
 
-  
+
   h4 {
     margin-top: 30px;
     font-weight: 600;
     font-family: "Roboto";
-    font-size: 45px;
+    font-size: 40px;
   }
 
   .footer_logo {
